@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>CIMO - Solicitaçõs de Serviço</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 style="text-align: center; font-size:30px">Solicitação de Serviço</h1>
+        <img src="logo_cimo.png" alt="CIMO" width="300" height="42" class="center">
+      </div>
+
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="username">Nome Completo</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Digite seu nome completo..."
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Digite seu email..." />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="especialidade">Especialidade</label>
+            <select id="especialidade" name="especialidade">
+              <option disabled selected value> -- Selecione uma opção -- </option>
+              <option value="AUT">AUTOMAÇÃO</option>
+              <option value="CIV">CIVIL</option>
+              <option value="CLR">CLIMATIZAÇÃO E REFRIGERAÇÃO</option>
+              <option value="ELE">ELÉTRICA</option>
+              <option value="HID">HIDRÁULICA</option>
+              <option value="JAR">JARDINAGEM E PAISAGISMO</option>
+              <option value="LIM">LIMPEZA</option>
+              <option value="MAC">MARCENARIA</option>
+              <option value="REC">RECEPÇÃO</option>
+              <option value="TVC">TRANSPORTE VERTICAL E CONTROLE DE ACESSO</option>
+            </select>
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="telefone">Telefone (opcional)</label>
+          <input type="text" id="telefone" placeholder="Digite seu número de telefone..." />
+          <!-- <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small> -->
+        </div>
+
+        <div class="form-control">
+          <label for="texto">Descrição da Ocorrência</label>
+          <textarea type="text" id="texto" name="pwc" rows="4" cols="50"
+          placeholder="Descreva sua solicitação, informando o local da ocorrência e detalhes do ocorrido. Mínimo de 20 caracteres."></textarea>
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+        <div>
+          <img src="logo_gps_unc.png" alt="Unica Corp, empresa do grupo GPS" width="300" height="66" class="center">      
+        </div>
+
+      </form>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>

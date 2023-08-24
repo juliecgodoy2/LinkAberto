@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'oreal Mensageria (SERVIÇO DE CARTÓRIO)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginb.css') }}" />
+  </head>
+  <body>
+    <h1>Serviço de Cartório</h1>
+    <form action="/mens001" method="POST">
+      <div class="form__fieldset">
+        <label for="pos_a" class="form__label">QUANTIDADE DE ITENS / COLETAR:</label>
+        <input type="text" name="pos_a" id="pos_a" class="form__input"/>
+      </div>
+      <div class="form__fieldset">
+        <label for="pos_b" class="form__label">OUTROS:</label>
+        <input type="text" name="pos_b" id="pos_b" class="form__input"/>
+      </div>
+      <div class="form__fieldset">
+        <label for="pos_c" class="form__label">PERÍODO DE COLETA DO MATERIAL / DATA HORA PARA ENVIO:</label>
+        <input type="text" name="pos_c" id="pos_c" class="form__input"/>
+      </div>
+      <div class="form__fieldset">
+        <label for="pos_d" class="form__label">AUTENTICAÇÃO:</label>
+        <input type="text" name="pos_d" id="pos_d" class="form__input"/>
+      </div>
+
+      <div class="form__fieldset">
+        <input
+          class="form__submit form__input"
+          type="submit"
+          value="Ok"
+        />
+      </div>
+    </form>
+  </body>
+</html>
