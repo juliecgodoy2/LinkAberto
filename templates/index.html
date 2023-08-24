@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CIMO - Solicitações de Serviço</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 style="text-align: center; font-size:30px">Solicitação de Serviço</h1>
+        <img src="{{ url_for('static', filename='logo_cimo.png') }}" alt="CIMO" width="300" height="42" class="center">
+      </div>
+      <form id="form" class="form" method="post">
+        <div class="form-control">
+          <label for="username">Nome Completo</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Digite seu nome completo..."
+            {% if username %}
+            value="{{ username }}"
+            {% endif %}
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Digite seu email..."
+            {% if email %}
+            value="{{ email }}"
+            {% endif %}
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="especialidade">Especialidade</label>
+            <select id="especialidade" name="especialidade">
+              <option disabled selected value>
+                -- Selecione uma opção --
+              </option>
+              <option value="AUT">AUTOMAÇÃO</option>
+              <option value="CIV">CIVIL</option>
+              <option value="CLR">CLIMATIZAÇÃO E REFRIGERAÇÃO</option>
+              <option value="ELE">ELÉTRICA</option>
+              <option value="HID">HIDRÁULICA</option>
+              <option value="JAR">JARDINAGEM E PAISAGISMO</option>
+              <option value="LIM">LIMPEZA</option>
+              <option value="MAC">MARCENARIA</option>
+              <option value="REC">RECEPÇÃO</option>
+              <option value="TVC">TRANSPORTE VERTICAL E CONTROLE DE ACESSO</option>
+            </select>
+            <i class="fas fa-exclamation-circle"></i>
+            <i class="fas fa-check-circle"></i>
+            <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="telefone">Telefone (opcional)</label>
+          <input
+            type="text"
+            id="telefone"
+            name="telefone"
+            placeholder="Digite seu número de telefone..."
+          />
+        </div>
+
+        <div class="form-control">
+          <label for="texto">Descrição da Ocorrência</label>
+          <textarea
+            type="text"
+            id="texto"
+            name="texto"
+            rows="4"
+            cols="50"
+            placeholder="Descreva sua solicitação, informando o local da ocorrência e detalhes do ocorrido. Mínimo de 20 caracteres."
+          ></textarea>
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+        <div>
+          <img
+            src="{{ url_for('static', filename='logo_gps_unc.png') }}"
+            alt="Unica Corp, empresa do grupo GPS"
+            width="300"
+            height="66"
+            class="center"
+          >
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>
